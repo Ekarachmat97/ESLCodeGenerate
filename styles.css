@@ -1,0 +1,198 @@
+body {
+  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+}
+header {
+  color: #fff;
+  background-color: #128c7e;
+  overflow: hidden;
+  padding: 0px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#open-menu{
+  cursor: pointer;
+}
+
+nav {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #128c7e;
+  overflow: hidden;
+}
+
+nav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 5px 15px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+nav a.active{
+border-bottom: 3px solid #000;
+}
+.menu{
+  display: none;
+  position: fixed;
+  top: 50px;
+  right: 10px;
+  padding: 100px 50px;
+  background-color: #fff;
+  border: 1px solid #000;
+  gap: 10px;
+}
+
+.tabcontent {
+  display: none;
+  padding: 50px 20px;
+}
+
+#content {
+  padding-top: 90px;
+  background-color: #fff;
+  height: 100vh;
+}
+
+/* Form style */
+#generate {
+  padding: 20px;
+}
+
+#expired-code-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="date"],
+select,
+input[type="text"],
+input[type="number"]{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.submit {
+  font-size: 17px;
+  background-color: #128c7e;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+.chat{
+  
+  position:fixed;
+  border-radius:5px;
+  bottom: 60px; 
+  right: 15px; 
+  z-index:99; 
+}
+
+/* Dark Mode Style */
+
+.dark-mode #content {
+  background-color: #333;
+  color: white;
+}
+.dark-mode header{
+  background-color: #222;
+}
+
+.dark-mode nav {
+  background-color: #222;
+}
+
+.dark-mode .option{
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode nav a {
+  color: white;
+}
+.dark-mode nav a.active{
+  border-bottom: 3px solid #128c7e;
+}
+
+.dark-mode .tabcontent {
+  background-color: #333;
+  color: white;
+}
+
+.dark-mode label,
+.dark-mode button, {
+  color: white;
+}
+
+.toggle-container{
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+/* Gaya untuk tombol close */
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #666;
+}
+
+/* Gaya untuk opsi */
+#option {
+    position: fixed;
+    display: none;
+    top: 0%;
+    right: 0%;
+    width: 200px;
+    height: 20vh;
+    padding: 10px;
+    background-color: #128c7e;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    border-radius: 5px;
+}
+
+.dark-mode #option {
+    position: fixed;
+    display: none;
+    top: 0%;
+    right: 0%;
+    width: 200px;
+    height: 20vh;
+    padding: 10px;
+    background-color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    border-radius: 5px;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" type="image/png" href="https://www.kindairy.com/themes/kindairy/img/product-page/ESL-3-varian-2.png">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#128c7e">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="styles.css" class="css">
+  <title>Expcode generate</title>
+</head>
+<body>
+<div style="position:fixed; width:100%;">
+<header>
+  <div><h3>EXPIRED CODE</h3></div>
+<div><span class="material-symbols-outlined" id="open-menu" onclick="toggleOption()">
+more_vert
+</span></div>
+</header>
+<nav>
+  <a href="#home">Home</a>
+  <a href="#generate">Generate Code</a>
+  <a href="#setting">Setting</a>
+</nav>
+</div> 
+ <div class="chat"><span class="material-symbols-outlined" id="whatsapp-button" style="font-size:50px; color: #128c7e; cursor:pointer;">
+chat
+</span>
+  </div>
+  <div class="menu">
+
+  </div>
+<div id="content">
+<div id="home" class="tabcontent">
+    <h2>Home</h2>
+    <p>Selamat datang di halaman packing produk ESL</p>
+    <img src="https://www.kindairy.com/themes/kindairy/img/product-page/ESL-3-varian-2.png" alt="ESL"
+    style="max-width:100%;">
+    <br>
+    <p>untuk melihat tanggal kadaluarsa setiap produk silahkan pilih Generate code. pilih tanggal produksi dan varian produk lalu generate. </p>
+    <br />
+    <p>bagaimana cara setting printer coding?
+    </p>
+    <button class="submit" type="submit">Pelajari</button>
+
+  <div class="tutorial" id="tutorial" style="display:none;">
+    <P>pertama colokan kabel</P>
+  </div>
+ </div>
+
+<div id="generate" class="tabcontent">
+  <h2>Generate Expired Code</h2>
+  <form id="expired-code-form">
+<label for="production-date">Tanggal Produksi:</label><br>
+<input type="date" id="production-date" name="production-date" required><br><br>
+    
+    <label for="product-variant">Varian Produk:</label><br>
+    <select id="product-variant" name="product-variant">
+      <option value="Fullcream B2B">Fullcream B2B</option>
+      <option value="Fullcream MT">Fullcream MT</option>
+      <option value="Chocolate">Chocolate</option>
+
+    </select><br><br>
+    
+    <label for="expired-code">Kode Expired:</label><br>
+    <input type="text" id="expired-code" name="expired-code" placeholder="Tampilan tanggal kadaluarsa"readonly>
+        <p style="font-size:10px">Tanggal kadaluarsa sewaktu-waktu dapat berubah sesuai ketetapan perusahaan.</p>
+    <br><br>
+
+    <div style="
+    display:flex;
+    justify-content: center;
+    align-items: center;">
+  <button class="submit" type="submit" onclick="updateShelfLife()">Generate Code</button>
+ </div>
+  </form>
+</div>
+
+<div id="setting" class="tabcontent">
+  <h2>Setting</h2>
+  <label for="shelflife-b2b">Shelf Life Fullcream B2B</label>
+  <input type="number" id="shelflife-b2b" placeholder="masukan Shelf Life" value="45">
+  <label for="shelflife-MT">Shelf Life ESL Fullcream MT dan Chocolate</label>
+  <P style="font-size:10px;">untuk counter pack awal 1-90 atau counter carton 1-7.</P>
+  <input type="number" id="shelflife-MT" placeholder="masukan Shelf Life" value="45">
+  <P style="font-size:10px;">untuk counter pack 91 sampai selesai atau counter carton 8 sampai selesai.</P>
+  <input type="number" id="shelflife-Chocolate" placeholder="masukan Shelf Life" value="65">
+</div>
+</div>
+
+<div class="option" id="option">
+<div class="close-button" id="close-option" onclick="closeOptions()">X</div>
+    <div class="toggle-container">
+        <label for="dark-mode" class="toggle-label">Mode Gelap</label>
+        <input class="custom-checkbox" type="checkbox" id="dark-mode-toggle">
+    </div>
+</div>
+
+<script src="app.js"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }, function(err) {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+    });
+  }
+</script>
+</body>
+
+</html>
